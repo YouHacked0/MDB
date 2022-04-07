@@ -2,6 +2,25 @@ import pymongo as c
 from tkinter import *
 import create_backup as backup
 import config
+import language_ru
+import language_en
+
+if config.language == "language_ru":
+    name=language_ru.name
+    age=language_ru.age
+    rank=language_ru.rank
+    salary=language_ru.salary
+    enter=language_ru.enter
+    type=language_ru.type
+    value=language_ru.value
+elif config.language == "language_en":
+    name=language_en.name
+    age=language_en.age
+    rank=language_en.rank
+    salary=language_en.salary
+    enter=language_en.enter
+    type=language_en.type
+    value=language_en.value
 
 
 def guiinsert():
@@ -17,25 +36,25 @@ def guiinsert():
     win = Toplevel(root)
     win.geometry("500x500")
 
-    txt11 = Label(win, text="Name:")
+    txt11 = Label(win, text=name)
     txt11.pack()
 
     e11 = Entry(win, width=13)
     e11.pack()
 
-    txt12 = Label(win, text="Age:")
+    txt12 = Label(win, text=age)
     txt12.pack()
 
     e12 = Entry(win, width=3)
     e12.pack()
 
-    txt13 = Label(win, text="Rank:")
+    txt13 = Label(win, text=rank)
     txt13.pack()
 
     e13 = Entry(win, width=2)
     e13.pack()
 
-    txt14 = Label(win, text="ZP:")
+    txt14 = Label(win, text=salary)
     txt14.pack()
 
     e14 = Entry(win, width=10)
@@ -64,25 +83,25 @@ def guiedit():
     win = Toplevel(root)
     win.geometry("500x500")
 
-    txt31 = Label(win, text="Name:")
+    txt31 = Label(win, text=name)
     txt31.pack()
 
     e31 = Entry(win, width=13)
     e31.pack()
 
-    txt32 = Label(win, text="Type:")
+    txt32 = Label(win, text=type)
     txt32.pack()
 
     e32 = Entry(win, width=13)
     e32.pack()
 
-    txt33 = Label(win, text="Value:")
+    txt33 = Label(win, text=value)
     txt33.pack()
 
     e33 = Entry(win, width=13)
     e33.pack()
 
-    btn3 = Button(win, text="Enter", command=edit)
+    btn3 = Button(win, text=enter, command=edit)
     btn3.pack()
 
 
@@ -126,13 +145,13 @@ def guiremove():
     win = Toplevel(root)
     win.geometry("500x500")
 
-    txt21 = Label(win, text="Name:")
+    txt21 = Label(win, text=name)
     txt21.pack()
 
     e21 = Entry(win, width=13)
     e21.pack()
 
-    btn2 = Button(win, text="Enter", command=delete)
+    btn2 = Button(win, text=enter, command=delete)
     btn2.pack()
 
 
@@ -182,13 +201,13 @@ def guiinfo():
     win = Toplevel(root)
     win.geometry("1000x300")
 
-    txt41 = Label(win, text="Name:")
+    txt41 = Label(win, text=name)
     txt41.pack()
 
     e41 = Entry(win, width=13)
     e41.pack()
 
-    btn = Button(win, text="Enter", command=info)
+    btn = Button(win, text=enter, command=info)
     btn.pack()
 
     status1 = Label(win, text="...")

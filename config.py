@@ -6,3 +6,6 @@ db_name = "Accounting"
 
 # Collection name
 collection_name = "Graphic Interface"
+
+# Language
+language = "language_en"
