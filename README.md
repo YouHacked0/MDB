@@ -1,8 +1,11 @@
+![alt text](screenshots/Меню.png "Главное меню проекта")
+
+
 MDB
 
 
 Обработка базы данных MongoDB через графический интерфейс.
-![alt text](screenshots/Меню.png "Главное меню проекта")
+
 
 Используемые модули: pymongo, tkinter
 
